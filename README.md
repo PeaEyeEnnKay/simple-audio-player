@@ -1,5 +1,5 @@
 # simple-audio-player
-Simple audio player example using PHP, javascript, and HTML5 audio tag.
+A quickly hacked together simple audio player example using PHP, javascript, and HTML5 audio tag.
 
 To use: 
 1. Create a folder called "audio" wherever you've put the index.php file. 
