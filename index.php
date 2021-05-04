@@ -64,6 +64,7 @@
                 break;
 
         }
+        document.getElementById("audioPlayer").play();
         document.getElementById("playerText").innerText= "Playing: " + filename;
     }
     </script>
