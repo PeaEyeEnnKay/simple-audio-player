@@ -200,10 +200,9 @@
                         <path fill-rule="evenodd" d="M16.75 10.83L4.55 19A1 1 0 0 1 3 18.13V1.87A1 1 0 0 1 4.55 1l12.2 8.13a1 1 0 0 1 0 1.7z"/>
                     </svg>
                 </button>
+                <span id="time">0:00</span> / <span id="duration">0:00</span>
             </div>
-
         </div>
-
     </div>
 
     <div id="playlist" class="playlist">
@@ -328,8 +327,19 @@
             }
         }
         updatePlayPauseButton(document.getElementById("play"));
+        updateTime();
 
     }
+
+    const updateTime = () =>
+    {
+        if(!isNaN(duration))
+        {
+            document.getElementById("duration").innerText = Math.floor(duration/60) + ":" + String(Math.floor(duration % 60)).padStart(2, "0");
+        }
+        document.getElementById("time").innerText = Math.floor(audioPlayer.currentTime/60) + ":" + String(Math.floor(audioPlayer.currentTime % 60)).padStart(2, "0");
+    };
+
     setInterval(updateProgress, 100);
     </script>
 
