@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>
-</title>
-<style>
-.playerWrapper{}
-#audioPlayer{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #666;
-}
-#playerText{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #666;
-}
-.track
-{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #666;
-    cursor: pointer;
-}
-</style>
+    <title>
+        Simple Audio Player
+    </title>
+    <style>
+    .playerWrapper
+    {
+        
+    }
+    #audioPlayer
+    {
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid #666;
+    }
+    #playerText
+    {
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid #666;
+    }
+    .track
+    {
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid #666;
+        cursor: pointer;
+    }
+    </style>
 </head>
 <body>
     <div class="playerWrapper">
