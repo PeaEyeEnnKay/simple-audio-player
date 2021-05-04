@@ -36,7 +36,7 @@
     <div id="playlist" class="playlist">
         <div>Select a file to play</div>
         <?php
-            //replace "audio" here with the directory contining your files.
+            //replace "audio" here with the directory containing your files.
             $files = scandir("audio", SCANDIR_SORT_ASCENDING);
             foreach($files as $key=>$filename)
             {
@@ -52,7 +52,7 @@
     const setSource = (filename) =>
     {
         filetype = filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2)
-        //replace "audio\\" here with the directory contining your files (double slashes required for folder separators).
+        //replace "audio\\" here with the directory containing your files (double slashes required for folder separators).
         document.getElementById("audioPlayer").src="audio\\" + filename;
         switch(filetype)
         {
