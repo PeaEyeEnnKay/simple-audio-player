@@ -21,6 +21,12 @@
     }
     .playlist{
         margin-top: 10px;
+        font-size: 0.8rem;
+        overflow: auto;
+        max-height: 50vh;
+    }
+    .playlist div:hover{
+        background-color: #003311;
     }
     #audioPlayer
     {
@@ -40,6 +46,11 @@
         padding: 10px;
         border: 2px solid #666;
         cursor: pointer;
+    }
+    .current
+    {
+        opacity: 0.9;
+        background-color:#336633;
     }
 
     input[type=range] {
@@ -165,6 +176,12 @@
         background-color: transparent;
         border: none;
     }
+    h1{
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
     </style>
 </head>
 <body>
@@ -172,20 +189,8 @@
         <audio id="audioPlayer">
             <source src="" type="audio/wav">
         </audio>
-        <div id="playerText">Not playing anything</div>
+        <div><h1 id="playerText">Not playing anything</h1></div>
         <div id="playerControls">
-            <div>
-                <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1">
-                <label for="volume">Volume</label>
-            </div>
-            <div>
-                <input type="range" id="rate" name="rate" min="0.5" max="2" step="0.25" value="1">
-                <label for="volume">Speed</label>
-            </div>
-            <div>
-                <input type="range" id="progress" name="progress" min="0" max="100" step="0.1" value="0">
-                <label for="volume">Progress</label>
-            </div>
             <div>
                 <button id="pause">
                     <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
@@ -241,15 +246,30 @@
                         <path class="cls-1" d="M204.91,654.32H646.36a12.29,12.29,0,0,0,8.81-3.78l136.1-140a13.9,13.9,0,0,0,.06-19.09L655.19,349.52a12.31,12.31,0,0,0-8.87-3.84H217.54c-7,0-12.63,6-12.63,13.36V523.49"/>
                     </svg>
                 </button>
+            </div>
 
-                
+            <div>
+                <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1">
+                <label for="volume">Volume</label>
+            </div>
+            <div>
+                <input type="range" id="rate" name="rate" min="0.5" max="2" step="0.25" value="1">
+                <label for="volume">Speed</label>
+            </div>
+            <div>
+                <input type="range" id="progress" name="progress" min="0" max="100" step="0.1" value="0">
+                <label for="volume">Progress</label>
+            </div>
+
+            <div>
                 <span id="time">0:00</span> / <span id="duration">0:00</span>
             </div>
+
         </div>
     </div>
 
+    <div><h2>Select a file to play</h2></div>
     <div id="playlist" class="playlist">
-        <div>Select a file to play</div>
         <?php
             //replace "audio" here with the directory containing your files.
             $files = scandir("audio", SCANDIR_SORT_ASCENDING);
@@ -257,7 +277,7 @@
             {
                 if($filename!="." && $filename!="..")
                 {
-                    print("<div class=\"track\" data-url=\"" . $filename . "\" onclick=\"setSource('$filename')\">" . $filename . "</div>\n");
+                    print("<div id=\"track_" . str_replace(" ","-",$filename) . "\" class=\"track\" data-url=\"" . $filename . "\" onclick=\"setSource('$filename')\">" . $filename . "</div>\n");
                 }
             }
         ?>
@@ -345,6 +365,20 @@
 
     const setSource = (filename) =>
     {
+        var currentTrackDiv = document.getElementById('track_'+filename.replace(/\s+/g, '-'));
+        var trackDivs = document.getElementById("playlist").querySelectorAll('.current');
+        var playlist = document.getElementById('playlist');
+
+        if(trackDivs!=null)
+        {
+            trackDivs.forEach(function(trackDiv){
+                trackDiv.classList.remove("current");
+            });
+        }
+        currentTrackDiv.classList.add("current");
+        var topPos = currentTrackDiv.offsetTop;
+        playlist.scrollTop = topPos - playlist.offsetTop;
+
         setCurrentInList(filename);
 
         document.getElementById("play").disabled=false;
@@ -365,7 +399,7 @@
         }
         audioPlayer.playbackRate = document.getElementById("rate").value
         audioPlayer.play();
-        document.getElementById("playerText").innerText= "Playing: " + filename;
+        document.getElementById("playerText").innerText= "" + filename;
     };
 
     const updateProgress = () => {
