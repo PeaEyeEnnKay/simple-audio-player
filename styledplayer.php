@@ -19,13 +19,15 @@
     {
         margin-top: 10px;
     }
-    .playlist{
+    .playlist
+    {
         margin-top: 10px;
         font-size: 0.8rem;
         overflow: auto;
-        max-height: 50vh;
+        height: 30vh;
     }
-    .playlist div:hover{
+    .playlist div:hover
+    {
         background-color: #003311;
     }
     #audioPlayer
@@ -277,7 +279,7 @@
             {
                 if($filename!="." && $filename!="..")
                 {
-                    print("<div id=\"track_" . str_replace(" ","-",$filename) . "\" class=\"track\" data-url=\"" . $filename . "\" onclick=\"setSource('$filename')\">" . $filename . "</div>\n");
+                    print("<div id=\"track_" . str_replace(" ","-",$filename) . "\" class=\"track\" data-url=\"" . $filename . "\" onclick=\"setSource('".str_replace("'","\'",$filename)."')\">" . $filename . "</div>\n");
                 }
             }
         ?>
@@ -287,6 +289,7 @@
     var userIsSettingProgress = false;
     var duration = audioPlayer.duration;
     var rate = audioPlayer.playbackRate;
+    
     if(audioPlayer.src=="")
     {
         document.getElementById("play").disabled=true;
@@ -319,7 +322,9 @@
     document.getElementById("playnext").addEventListener("click", (event) => {
         playNext(event.target);
     });
-    
+    window.addEventListener("resize", (event) => {
+        setPlaylistHeight();
+    });
 
     const setPlaybackRate = (element) =>
     {
@@ -472,6 +477,15 @@
             i = 0; // therefore we reset the current index to the first available song
             setSource(audioArray[i].getAttribute('data-url')); //set next song
     };
+
+    const setPlaylistHeight = () =>
+    {
+        var playlist = document.getElementById('playlist');
+        var calulatedHeight = window.innerHeight - (playlist.offsetTop + 10);
+        playlist.style.height = calulatedHeight+"px";
+    }
+
+    setPlaylistHeight();
 
     setInterval(updateProgress, 100);
     </script>
