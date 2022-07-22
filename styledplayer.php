@@ -212,35 +212,34 @@
                     <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                     <title>Play</title>
                         <defs>
-                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}.cls-2{fill:#009000;}</style>
                         </defs>
                         <path class="cls-1" d="M420,206.66a306.22,306.22,0,0,1,160,0"/>
                         <path class="cls-1" d="M645.16,232.84C739.77,284.37,804,384.68,804,500c0,167.89-136.09,304-304,304S196,667.89,196,500c0-115.32,64.21-215.63,158.82-267.16"/>
                         <path class="cls-1" d="M383.36,675a210.31,210.31,0,0,1,0-350"/>
                         <path class="cls-1" d="M614.6,328.07a206.64,206.64,0,0,1,0,343.86"/>
-                        <path class="cls-1" d="M547.91,526.09l10.6-6.74a22.92,22.92,0,0,0,0-38.7L456.75,416a16.85,16.85,0,0,0-25.89,14.23v139.5A16.85,16.85,0,0,0,456.75,584l54.91-34.87"/>
+                        <path class="cls-2" d="M547.91,526.09l10.6-6.74a22.92,22.92,0,0,0,0-38.7L456.75,416a16.85,16.85,0,0,0-25.89,14.23v139.5A16.85,16.85,0,0,0,456.75,584l54.91-34.87"/>
                     </svg>
                 </button>
                 <button id="playall">
                     <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                         <title>
-                            play all
+                            Play all
                         </title>
                         <defs>
-                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}.cls-2{fill:#009000;}</style>
                         </defs>
                         <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="266.09"/>
                         <path class="cls-1" d="M825.35,372.08v-94a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
-                        <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="447"/>
-                        <path class="cls-1" d="M825.35,553V459a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
                         <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="627.92"/>
                         <path class="cls-1" d="M825.35,733.91v-94a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
+                        <path class="cls-2" d="M547.91,526.09l10.6-6.74a22.92,22.92,0,0,0,0-38.7L456.75,416a16.85,16.85,0,0,0-25.89,14.23v139.5A16.85,16.85,0,0,0,456.75,584l54.91-34.87"/>
                     </svg>
                 </button>
                 <button id="playnext">
                     <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
-                    <title>
-                            play next
+                        <title>
+                            Play next
                         </title>
                         <defs>
                             <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
