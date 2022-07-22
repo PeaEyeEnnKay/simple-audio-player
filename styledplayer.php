@@ -444,21 +444,25 @@
     {
         setSource(audioArray[i].getAttribute('data-url')); //set first song
 
-        audioPlayer.addEventListener('ended',function()
-        {
-            audioPlayer.pause();
-            //when a song finished playing
-            i++; //increase index
-            if (i < audioArray.length) { //If current index is smaller than count of songs
-                setSource(audioArray[i].getAttribute('data-url')); //set next song
-            return; // stop further processing of this function for now
-            }
-            // current index is greater than count of songs
-            i = 0; // therefore we reset the current index to the first available song
-            setSource(audioArray[i].getAttribute('data-url')); //set next song
-        });
+        audioPlayer.removeEventListener('ended', trackEnded);
+
+        audioPlayer.addEventListener('ended', trackEnded);
     };
     
+    const trackEnded = ()=>
+    {
+        audioPlayer.pause();
+        //when a song finished playing
+        i++; //increase index
+        if (i < audioArray.length) { //If current index is smaller than count of songs
+            setSource(audioArray[i].getAttribute('data-url')); //set next song
+        return; // stop further processing of this function for now
+        }
+        // current index is greater than count of songs
+        i = 0; // therefore we reset the current index to the first available song
+        setSource(audioArray[i].getAttribute('data-url')); //set next song
+    };
+
     const setCurrentInList = (filename) =>
     {
         for(var index=0; index<audioArray.length; index++)
@@ -468,8 +472,6 @@
                 i=index;
             }
         }
-        console.log(i);
-
     }
 
     const playNext = () =>
