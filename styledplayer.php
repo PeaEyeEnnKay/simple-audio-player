@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     /* styles the play pause fill colour*/
-    * { fill: #090 }
+    * { fill: #43f443 }
 
     body{
         background-color: #010;
@@ -161,6 +161,10 @@
         position: relative;
         top:-9px;
     }
+    button{
+        background-color: transparent;
+        border: none;
+    }
     </style>
 </head>
 <body>
@@ -184,22 +188,61 @@
             </div>
             <div>
                 <button id="pause">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                        <title>
-                            pause
-                        </title>
-                        <rect width="6" height="16" x="3" y="2" rx="1" ry="1"/>
-                        <rect width="6" height="16" x="11" y="2" rx="1" ry="1"/>
+                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                        <title>Pause</title>
+                        <defs>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}.cls-2{fill:#009000;}</style>
+                        </defs>
+                        <path class="cls-1" d="M420,206.66a306.22,306.22,0,0,1,160,0"/>
+                        <path class="cls-1" d="M645.16,232.84C739.77,284.37,804,384.68,804,500c0,167.89-136.09,304-304,304S196,667.89,196,500c0-115.32,64.21-215.63,158.82-267.16"/>
+                        <path class="cls-1" d="M383.36,675a210.31,210.31,0,0,1,0-350"/>
+                        <path class="cls-1" d="M614.6,328.07a206.64,206.64,0,0,1,0,343.86"/>
+                        <rect class="cls-2" height="177.46" rx="6.13" width="26.35" x="447.04" y="411.27"/>
+                        <rect class="cls-2" height="177.46" rx="6.13" width="26.35" x="526.61" y="411.27"/>
                     </svg>
                 </button>
                 <button id="play">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 18">
-                        <title>
-                            play
-                        </title>
-                        <path fill-rule="evenodd" d="M16.75 10.83L4.55 19A1 1 0 0 1 3 18.13V1.87A1 1 0 0 1 4.55 1l12.2 8.13a1 1 0 0 1 0 1.7z"/>
+                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <title>Play</title>
+                        <defs>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+                        </defs>
+                        <path class="cls-1" d="M420,206.66a306.22,306.22,0,0,1,160,0"/>
+                        <path class="cls-1" d="M645.16,232.84C739.77,284.37,804,384.68,804,500c0,167.89-136.09,304-304,304S196,667.89,196,500c0-115.32,64.21-215.63,158.82-267.16"/>
+                        <path class="cls-1" d="M383.36,675a210.31,210.31,0,0,1,0-350"/>
+                        <path class="cls-1" d="M614.6,328.07a206.64,206.64,0,0,1,0,343.86"/>
+                        <path class="cls-1" d="M547.91,526.09l10.6-6.74a22.92,22.92,0,0,0,0-38.7L456.75,416a16.85,16.85,0,0,0-25.89,14.23v139.5A16.85,16.85,0,0,0,456.75,584l54.91-34.87"/>
                     </svg>
                 </button>
+                <button id="playall">
+                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                        <title>
+                            play all
+                        </title>
+                        <defs>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+                        </defs>
+                        <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="266.09"/>
+                        <path class="cls-1" d="M825.35,372.08v-94a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
+                        <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="447"/>
+                        <path class="cls-1" d="M825.35,553V459a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
+                        <rect class="cls-1" height="105.99" rx="12" width="105.99" x="174.65" y="627.92"/>
+                        <path class="cls-1" d="M825.35,733.91v-94a12,12,0,0,0-12-12H365.25a12,12,0,0,0-12,12v82a12,12,0,0,0,12,12H744.64"/>
+                    </svg>
+                </button>
+                <button id="playnext">
+                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <title>
+                            play next
+                        </title>
+                        <defs>
+                            <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style>
+                        </defs>
+                        <path class="cls-1" d="M204.91,654.32H646.36a12.29,12.29,0,0,0,8.81-3.78l136.1-140a13.9,13.9,0,0,0,.06-19.09L655.19,349.52a12.31,12.31,0,0,0-8.87-3.84H217.54c-7,0-12.63,6-12.63,13.36V523.49"/>
+                    </svg>
+                </button>
+
+                
                 <span id="time">0:00</span> / <span id="duration">0:00</span>
             </div>
         </div>
@@ -214,7 +257,7 @@
             {
                 if($filename!="." && $filename!="..")
                 {
-                    print("<div class=\"track\" onclick=\"setSource('$filename')\">" . $filename . "</div>\n");
+                    print("<div class=\"track\" data-url=\"" . $filename . "\" onclick=\"setSource('$filename')\">" . $filename . "</div>\n");
                 }
             }
         ?>
@@ -250,6 +293,13 @@
     document.getElementById("pause").addEventListener("click", (event) => {
         playOrPause(event.target);
     });
+    document.getElementById("playall").addEventListener("click", (event) => {
+        playAll(event.target);
+    });
+    document.getElementById("playnext").addEventListener("click", (event) => {
+        playNext(event.target);
+    });
+    
 
     const setPlaybackRate = (element) =>
     {
@@ -295,6 +345,8 @@
 
     const setSource = (filename) =>
     {
+        setCurrentInList(filename);
+
         document.getElementById("play").disabled=false;
         updatePlayPauseButton(document.getElementById("play"));
 
@@ -338,6 +390,53 @@
             document.getElementById("duration").innerText = Math.floor(duration/60) + ":" + String(Math.floor(duration % 60)).padStart(2, "0");
         }
         document.getElementById("time").innerText = Math.floor(audioPlayer.currentTime/60) + ":" + String(Math.floor(audioPlayer.currentTime % 60)).padStart(2, "0");
+    };
+
+    const audioArray = document.getElementsByClassName('track'); //Get a list of all songs
+    let i = 0; //Initiate current Index
+
+    const playAll = () =>
+    {
+        setSource(audioArray[i].getAttribute('data-url')); //set first song
+
+        audioPlayer.addEventListener('ended',function()
+        {
+            audioPlayer.pause();
+            //when a song finished playing
+            i++; //increase index
+            if (i < audioArray.length) { //If current index is smaller than count of songs
+                setSource(audioArray[i].getAttribute('data-url')); //set next song
+            return; // stop further processing of this function for now
+            }
+            // current index is greater than count of songs
+            i = 0; // therefore we reset the current index to the first available song
+            setSource(audioArray[i].getAttribute('data-url')); //set next song
+        });
+    };
+    
+    const setCurrentInList = (filename) =>
+    {
+        for(var index=0; index<audioArray.length; index++)
+        {
+            if(audioArray[index].getAttribute('data-url') == filename)
+            {
+                i=index;
+            }
+        }
+        console.log(i);
+
+    }
+
+    const playNext = () =>
+    {
+        i++; //increase index
+            if (i < audioArray.length) { //If current index is smaller than count of songs
+                setSource(audioArray[i].getAttribute('data-url')); //set next song
+            return; // stop further processing of this function for now
+            }
+            // current index is greater than count of songs
+            i = 0; // therefore we reset the current index to the first available song
+            setSource(audioArray[i].getAttribute('data-url')); //set next song
     };
 
     setInterval(updateProgress, 100);
