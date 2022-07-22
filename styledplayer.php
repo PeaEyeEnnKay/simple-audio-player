@@ -377,7 +377,7 @@
         }
         currentTrackDiv.classList.add("current");
         var topPos = currentTrackDiv.offsetTop;
-        playlist.scrollTop = topPos - playlist.offsetTop;
+        playlist.scrollTop = (topPos - playlist.offsetTop) - (playlist.offsetHeight/2);
 
         setCurrentInList(filename);
 
