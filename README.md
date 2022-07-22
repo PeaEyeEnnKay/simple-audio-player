@@ -12,12 +12,12 @@ The two pages:
 
 
 Play and pause icons used in index.php.(MIT License)
-https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_pause.svg
-https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_play-ltr-progressive.svg
+- https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_pause.svg
+- https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_play-ltr-progressive.svg
 
 Icons in the styled player are icons found at https://www.svgrepo.com/ or tweaks of them (CC Attribution License)
 Sanghita Debnath - Common Material Design Vectors
-https://www.svgrepo.com/svg/418203/play-music-audio
-https://www.svgrepo.com/svg/418197/pause-music-sound
-https://www.svgrepo.com/svg/418192/list-checklist
-https://www.svgrepo.com/svg/418237/lable
+- https://www.svgrepo.com/svg/418203/play-music-audio
+- https://www.svgrepo.com/svg/418197/pause-music-sound
+- https://www.svgrepo.com/svg/418192/list-checklist
+- https://www.svgrepo.com/svg/418237/lable
