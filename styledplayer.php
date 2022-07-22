@@ -42,6 +42,14 @@
         padding: 10px;
         border: 2px solid #666;
     }
+    #playbackControls{
+        height:40px;
+    }
+    #playbackControls > button, #playbackControls > span
+    {
+        line-height: 10px;
+        vertical-align:middle;
+    }
     .track
     {
         margin: 10px;
@@ -193,7 +201,7 @@
         </audio>
         <div><h1 id="playerText">Not playing anything</h1></div>
         <div id="playerControls">
-            <div>
+            <div id="playbackControls">
                 <button id="pause">
                     <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                         <title>Pause</title>
@@ -247,6 +255,9 @@
                         <path class="cls-1" d="M204.91,654.32H646.36a12.29,12.29,0,0,0,8.81-3.78l136.1-140a13.9,13.9,0,0,0,.06-19.09L655.19,349.52a12.31,12.31,0,0,0-8.87-3.84H217.54c-7,0-12.63,6-12.63,13.36V523.49"/>
                     </svg>
                 </button>
+
+                <span id="time">0:00</span><span> / </span><span id="duration">0:00</span>
+
             </div>
 
             <div>
@@ -260,10 +271,6 @@
             <div>
                 <input type="range" id="progress" name="progress" min="0" max="100" step="0.1" value="0">
                 <label for="volume">Progress</label>
-            </div>
-
-            <div>
-                <span id="time">0:00</span> / <span id="duration">0:00</span>
             </div>
 
         </div>
