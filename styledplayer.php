@@ -43,7 +43,7 @@
         border: 2px solid #666;
     }
     #playbackControls{
-        height:40px;
+        height:60px;
     }
     #playbackControls > button, #playbackControls > span
     {
@@ -203,7 +203,7 @@
         <div id="playerControls">
             <div id="playbackControls">
                 <button id="pause">
-                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="60px" height="60px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                         <title>Pause</title>
                         <defs>
                             <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}.cls-2{fill:#009000;}</style>
@@ -217,7 +217,7 @@
                     </svg>
                 </button>
                 <button id="play">
-                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="60px" height="60px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                     <title>Play</title>
                         <defs>
                             <style>.cls-1{fill:solid;stroke:#009000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}.cls-2{fill:#009000;}</style>
@@ -230,7 +230,7 @@
                     </svg>
                 </button>
                 <button id="playall">
-                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="60px" height="60px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                         <title>
                             Play all
                         </title>
@@ -245,7 +245,7 @@
                     </svg>
                 </button>
                 <button id="playnext">
-                    <svg width="40px" height="40px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="60px" height="60px" viewBox="100 100 800 800" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
                         <title>
                             Play next
                         </title>
