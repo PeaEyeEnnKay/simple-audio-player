@@ -396,8 +396,8 @@
         updatePlayPauseButton(document.getElementById("play"));
 
         filetype = filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2)
-        //replace "audio\\" here with the directory containing your files (double slashes required for folder separators).
-        audioPlayer.src="audio\\" + filename;
+        //replace "audio/" here with the directory containing your files.
+        audioPlayer.src="audio/" + filename;
         switch(filetype)
         {
             case "mp3":
